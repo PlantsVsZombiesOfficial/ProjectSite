@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Mouse+Memoirs&family=Poppins:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    
+}
+
+body{ 
+  
+    font-family: Comic;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    top:0;
+    left: 0px;
+    justify-content: center;
+
+}
+
+.body{
+  background-image: url("img/strat.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  filter: blur(10px);
+  filter: brightness(70%);
+  right: 0px;
+  z-index: -2;
+  width: 100%;
+  height: 980vh;
+  
+}
+.whole-content{
+  
+    z-index: -1;
+    position: absolute;
+    width: 80%;
+    height: 960vh;
+    right: 10%;
+    justify-content: center;
+    top: 120px;
+    background-color: rgba(245, 222, 179, 0.842);
+   
+    
+}
+.whole-content h1{
+
+    color: black;
+    font-family: 'Marcellus SC', sans-serif;
+    letter-spacing: 5px;
+    font-size:400%;
+    text-align: center;
+    margin-top: 100px;
+    animation: left-right 3s infinite;
+    
+}
+.icon1{
+
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  z-index: -1;
+  animation: rotation 4s infinite linear;
+}
+
+
+
+
+.icon2{
+  position: absolute;
+  top: 80px;
+  right: 100px;
+  z-index: -1;
+  animation: rotation2 4s infinite linear;
+}
+
+
+.border{
+  border: 5px groove;
+}
+
+ol{
+     padding: 4rem;
+    margin-top: 10px;
+    font-size: 20px;
+    justify-content: space-evenly;
+}
+ol li p {
+   
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+ol li B{
+    font-family: 'Mouse Memoirs', sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+
+.Back {
+    position: absolute;
+    font: 'Poppins';
+    top: 100px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: -1;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+  
+  .Back:hover,
+  .Back:focus {
+    animation: 10s lights infinite;
+   
+    
+  }
+  
+
+
+  #myBtn {
+  
+  position: absolute;
+  bottom: -5820px; 
+  right: 40px; 
+  z-index: -1; 
+  border: none; 
+  outline: none;
+  background-color: rgba(48, 71, 105, 0.712); 
+  color: white; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 10px; 
+  font-size: 18px; 
+  animation: 10s lights linear infinite;
+    
+  }
+  
+  #myBtn:hover {
+    background-color: rgba(151, 213, 231, 0.527); 
+  }
+
+
+  
+@keyframes lights {
+    from {
+      text-shadow: 0 0 10px rgb(219, 243, 214), 0 0 20px rgb(191, 233, 201), 0 0 30px #4dcedf, 0 0 40px #3462c4, 0 0 50px #006be6, 0 0 60px #007fe6, 0 0 70px #009de6;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #5232e2, 0 0 40px #3c30dd, 0 0 50px #5c11e7, 0 0 60px #b84dff, 0 0 70px #5f4dff, 0 0 80px #0875a7;
+    }
+  }
+  
+  
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotation2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes left-right {
+ 
+
+0% {
+  text-align: center;
+}
+25% {
+  margin-left: 20%;
+}
+
+75% {
+  margin-left: -20%;
+}
+100% {
+  text-align: center;
+}
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 1920px) {
+
+  
+.whole-content{
+  
+  z-index: -1;
+  position: absolute;
+  width: 80%;
+  height: 895vh;
+  right: 10%;
+  justify-content: center;
+  top: 120px;
+  background-color: rgba(245, 222, 179, 0.842);
+ 
+  
+}
+
+.body{
+  background-image: url("img/strat.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  filter: blur(10px);
+  filter: brightness(70%);
+  right: 0px;
+  z-index: -2;
+  width: 100%;
+  height: 920vh;
+  
+}
+.Tips ol li img{
+    width:70%;
+  }
+.Tips ol li span img{
+    width:90%;
+  }
+  .whole-content h1{
+
+    font-size:700%;
+    
+}
+
+ol{
+  padding: 4rem;
+ margin-top: 10px;
+ font-size: 30px;
+ color: #463a16;
+ justify-content: space-evenly;
+ font-weight: 10px;
+}
+ol li p {
+
+ font-family: 'Poppins', sans-serif;
+ font-size: 25px;
+ color: #49412a;
+}
+
+ol li B{
+ font-family: 'Mouse Memoirs', sans-serif;
+ letter-spacing: 3px;
+ font-size: 28px;
+ color: #5f501d;
+}
+#myBtn {
+  bottom: -7825px; 
+  right: 70px; 
+    
+  }
+
+}

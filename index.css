@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Poppins&family=Rubik+Wet+Paint&family=Sedgwick+Ave+Display&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+} 
+body {
+    height: 1000px;
+}
+nav{
+  display: flex;
+    height: 80px;
+    width: 100%;
+    background-image: url(img/greenBG1.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    filter: brightness(80%) contrast(120%);
+}
+nav .logo{
+    width: 46px;
+    height: 46px;
+}
+nav .logo img {
+    width: 70x;
+    height: 65px;
+    margin-top: -10px;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+    font-family: "Poppins";
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+    
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    background: #32cd32;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;  
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: black;
+  }
+}
+#landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+	overflow: hidden;
+    height: 888px;
+    background-image: url(img/Header.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    filter: brightness(80%) contrast(110%) saturate(110%);
+}
+#landing-page h1 {
+    height: 161px;
+    left: 160px;
+    top: 150px;
+    font-family: 'Rubik Wet Paint';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150px;
+/* identical to box height */
+    display: flex;
+    letter-spacing: 3%; 
+    color: #FFFFFF; 
+    text-shadow: 2px 2px 8px #000;
+}
+#landing-page h2 {
+    position: absolute;
+    left: 620px;
+    top: 310px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    display: flex;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;  
+    text-shadow: 2px 2px 8px #000;
+}
+#landing-page h3 {
+    position: absolute;
+    width: 825px;
+    height: 104px;
+    left: 690px;
+    top: 570px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    display: flex;
+    text-align: center;
+    letter-spacing: 0.8em;
+    color: #FFFFFF; 
+    text-shadow: 2px 2px 8px #000;
+}
+.explore-btn {
+    position: absolute;
+    width: 200px;
+    height: 65px;
+    left: 815px;
+    top: 640px;
+    border-radius: 6px;
+    background-color: #62d36db3;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 0.04em;
+    padding: 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 5px 10px 15px 5px rgba(0, 0, 0, 1);
+}
+.explore-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+}
+.explore-btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.explore-btn:hover span {
+    padding-right: 25px;
+}
+.explore-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+#content {
+    position: relative;
+    top: 0px;   
+}
+.container1 {
+    width: 15.7%;
+	height: 50%;
+    /*position: absolute;*/
+    background: #FFFFFF;  
+}
+.container1 img {
+    left: 0;
+    width: 637%;
+    height: 200%;
+   /* position: absolute;*/
+    margin: 0;
+    padding: 0;
+}
+.container1 .clip-path1 {
+    clip-path: polygon(60.2% 0%, 100% 0%, 39.8% 100%, 0% 100%);
+    opacity: 0.6; 
+}
+.container1 h1 {
+    position: absolute;
+    height: 52px;
+    left: 58px;
+    top: 130px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 52px;
+    /* identical to box height */
+    letter-spacing: -0.015em;
+    color: #000000;
+}
+.container1 p {
+    position: absolute;
+    width: 730px;
+    height: 120px;
+    left: 75px;
+    top: 310px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    color: #000000;
+}
+.container1 .button-1 {
+    background-color: #62D36D;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 35px;
+    margin: 5px;
+    cursor: pointer;
+    position: absolute;
+    width: 190px;
+    height: 65px;
+    left: 296px;
+    top: 600px;
+    background-image: -webkit-linear-gradient(30deg, #62D36D 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #62D36D 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 500ms ease-in-out;
+    transition: background 500ms ease-in-out;
+    box-shadow: 10px 15px 20px -8px rgba(0, 0, 0, 1);
+}
+.button-1:hover {
+    background-position: 100%;
+    color: limegreen;
+    background-color: #FFF;
+}
+.container1 .video-trailer {
+    position: absolute;
+    width: 830px;
+    height: 550px;
+    left: 1040px;
+    top: 170px;
+}
+.inline-photo {
+    opacity: 0;
+  transform: translateY(-20px);
+  transition: transform 5s .30s cubic-bezier(0,1,.3,1),
+              opacity .4s .30s ease-out;
+}
+.inline-photo.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/*.video-trailer {
+  animation: bounce-in-right 2s ease infinite;
+}
+@keyframes bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  80% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}*/
+#content2 {
+    position: relative;
+    top: -1px;   
+    
+}
+.container2 {
+   /* position: absolute;*/
+    width: 15.7%;
+	height: 50%;
+    background: #FFFFFF;
+}
+.container2 img {
+    left: 0;
+    width: 637%;
+    height: 200%;
+    /*position: absolute;*/
+    margin-top: -6px;
+}
+.container2 .clip-path2 {
+    clip-path: polygon(0% 0%, 39.8% 0%, 99.9% 100%, 60.2% 100%);
+    opacity: 0.6;
+}
+.container2 .game-modes {
+    position: absolute;
+     width: 830px;
+    height: 550px;
+    left: 33px;
+    top: 150px;
+}
+/*.game-modes {
+  animation: bounce-in-left 2s ease infinite;
+}
+@keyframes bounce-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+  80% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}*/
+.container2 h1 {
+    position: absolute;
+    height: 52px;
+    left: 1050px;
+    top: 90px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 52px;
+    /* identical to box height */
+    letter-spacing: -0.015em;
+    color: #000000;
+}
+.container2 p {
+    position: absolute;
+    width: 800px;
+    height: 200px;
+    left: 1030px;
+    top: 220px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 50px;
+    color: #000000;
+    text-align: justify;
+    
+}
+.container2 .button-2 {
+    background-color: #62D36D;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 35px;
+    margin: 5px;
+    cursor: pointer;
+    position: absolute;
+    width: 190px;
+    height: 65px;
+    left: 1300px;
+    top: 590px;
+    background-image: -webkit-linear-gradient(30deg, #62D36D 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #62D36D 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 500ms ease-in-out;
+    transition: background 500ms ease-in-out;
+    box-shadow: 10px 15px 20px -8px rgba(0, 0, 0, 1);
+}
+.button-2:hover {
+    background-position: 100%;
+    color: limegreen;
+    background-color: #FFF;
+}
+#content3 {
+    width: 100%;
+    position: relative;
+    background: #fff;
+    top: -8px; 
+}
+.container3 img {
+    width: 922px;
+    height: 400px;
+}
+.container3 .pvz-poster{
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 100%);
+    width: 1000px;
+    height: 800px;
+    top: 0px;
+}
+.container3 .green-bg{
+    clip-path: polygon(38.5% 0%, 100% 0%, 100% 100%, 4.4% 100%);
+    width: 1468px;
+    height: 800px;
+    position: absolute;
+    left: 435px;
+    opacity: 0.6;
+}
+.container3 h1 {
+    position: absolute;
+    width: 600px;
+    height: 122px;
+    left: 1150px;
+    top: 140px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-style: normal;   
+    font-size: 120px;
+    line-height: 131px;
+    letter-spacing: -0.015em;
+    color: #60FD79;    
+    text-shadow: 2px 2px 5px black;
+}
+.container3 p {
+    position: absolute;
+    width: 800px;
+    height: 62px;
+    left: 950px;
+    top: 320px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 62px;
+    /* identical to box height */
+    letter-spacing: -0.015em;
+    color: #000000;
+    text-align: center;
+}
+.container3 .button-3 {
+    position: absolute;
+    width: 190px;;
+    height: 120px;
+    left: 1250px;
+    top: 500px;
+    background: #6b8971;
+    font-size: 80px;
+    color: #E8FFEA;
+    text-align: center;
+    text-decoration: none; 
+    transition: .3s;   
+}
+.button-3:hover {
+  animation: pulse 1s infinite;
+  transition: .3s;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(.9);
+  }
+    100% {
+    transform: scale(1);
+  }
+}
+#content4 {
+    position: relative;
+    top: -16px;
+    background-image: url(img/PvZNight.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 888px;
+    width: 100%;
+    overflow: hidden;
+}
+.container4 h1 {
+    position: absolute;
+    left: 1150px;
+    top: 180px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 131px;
+    /* identical to box height */
+    letter-spacing: -0.015em;
+    color: #9BD99A;
+    text-align: center;
+    text-shadow: 1px 0px 5px black;
+}
+.container4 h3 {
+    position: absolute;
+    left: 1050px;
+    top: 318px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 87px;
+    color: #BDCAC0;
+    text-align: center;
+}
+.container4 p {
+    position: absolute;
+    left: 950px;
+    right: 13.33%;
+    top: 430px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 45px;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    color: #FFFFFF; 
+}
+.container4 .button-4 {
+    background-color: #62D36D;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 35px;
+    margin: 5px;
+    cursor: pointer;
+    position: absolute;
+    width: 300px;
+    height: 65px;
+    left: 1140px;
+    top: 710px;  background-image: -webkit-linear-gradient(30deg, #62D36D 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #62D36D 50%, transparent 50%);
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 500ms ease-in-out;
+    transition: background 500ms ease-in-out;
+    box-shadow: 10px 15px 20px -8px rgba(0, 0, 0, 1);
+}
+.button-4:hover {
+    background-position: 100%;
+    color: limegreen;
+    background-color: #FFF;
+}
+footer{
+    background-image: url("img/footerimg.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    top: -16px;
+    
+}
+footer div ul {
+   bottom: 535px;
+   position: absolute;
+   left: 44%;
+
+}
+footer div ul li {
+    display: inline-block;
+    letter-spacing: 30px;
+    padding:0.20px;
+    font-size: 45px;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    cursor: pointer;
+    transform: translateY(2pc);
+    color: rgb(0, 204, 0);
+}
+footer div img{
+    position: absolute;
+    width:500px;
+    height:250px;
+    left: 38%;
+    bottom: 285px;  
+}
+footer center p{
+    position: absolute;
+    bottom: 10px;
+    left: 41%;
+    font-size: 30px;
+    color: white;
+    font-family: 'Poppins';
+}
+footer span{
+    display: inline-block;
+    letter-spacing: 2px;
+    background-color: #5b6d6096;
+    color:white;
+    font-size: 30px;
+    font-weight: 1px;
+}
+footer .f1{
+   bottom: 120px;
+   left: 15%;
+    padding: 10px;
+    position: absolute;
+    cursor: pointer;
+    width: 350px;
+    height: 70px;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: -0.015em;
+    font-family: 'Poppins';
+    
+}
+footer .f2{
+   bottom: 120px;
+   left: 39%;
+    padding: 10px;
+    position: absolute;
+    cursor: pointer;
+    width: 460px;
+    height: 70px;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: -0.015em;
+    font-family: 'Poppins';s   
+}
+footer .f3{
+    bottom: 120px;
+    right: 12%;
+     padding: 10px;
+     position: absolute;
+     cursor: pointer;
+     width: 370px;
+    height: 70px;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: -0.015em;
+     font-family: 'Poppins';
+ }

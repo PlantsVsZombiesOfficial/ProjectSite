@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Poppins&family=Rubik+Wet+Paint&family=Sedgwick+Ave+Display&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+} 
+nav{
+  display: flex;
+    height: 80px;
+    width: 100%;
+    background-image: url(Characterpics/greenBG1.jpg.jpeg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    filter: brightness(80%) contrast(120%);
+}
+nav .logo{
+    width: 46px;
+    height: 46px;
+}
+nav .logo img {
+    width: 70x;
+    height: 65px;
+    margin-top: -10px;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+    font-family: "Poppins";
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+    
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    background: #32cd32;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;  
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: black;
+  }
+}
+
+#BoxAlmanac{
+  /* grey box ng almanac*/
+  box-sizing: border-box;
+  position: absolute;
+  width: 1548px;
+  height: 121px;
+  left: 148px;
+  left: 148px;
+  top: 140px;
+  background: #D9D9D9;
+  border: 1px solid #000000;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.99);
+}
+
+#Almanac{
+  align-self: center;
+  position: absolute;
+  width: 463px;
+  height: 78px;
+  left: 770px;
+  top: 159px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  -webkit-text-stroke-color: #000000;
+  text-shadow: 0 0 5px black, 0 0 5px black;
+  line-height: 78px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+}
+
+#Background{
+  box-sizing: border-box;
+  position: absolute;
+  width: 1860px;
+  height: 860px;
+  left: 30px;
+  top: 106px;
+  background: #F7BF84;
+  border: 20px dashed #000000;
+  filter: blur(30px);
+}
+
+#GreyRectangle{
+  /* grey margin/outline */
+  box-sizing: border-box;
+  position: absolute;
+  width: 1920px;
+  height: 887px;
+  left: 0px;
+  top: 80px;
+  border: 20px solid #9D9C9C;
+}
+
+#Sunflower{
+  box-sizing: border-box;
+  position: absolute;
+  width: 402px;
+  height: 470px;
+  left: 224px;
+  bottom: 132px;
+  background: url(Characterpics/sunflower.png), #6C2F12;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 10px solid #5F8E02;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.6);
+}
+
+.Description{
+  /* for plants, characters, and zombies */
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 79px;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+}
+
+#Plants{
+  /* green rectangle above sunflower*/
+  position: absolute;
+  width: 318px;
+  height: 82px;
+  left: 266px;
+  right: 203px;
+  top: 200px;
+  background: #5F8E02;
+}
+
+#Plants a:link,
+#Plants a:visited{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#Plants a.active,
+#Plants a:hover{
+  color: #5F8E02;
+  background: #F7BF84;
+}
+
+#Characters a:link,
+#Characters a:visited{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#Characters a.active,
+#Characters a:hover{
+  color: #93049F;
+  background: #FFFFFF;
+}
+
+#ZombieBox a:link,
+#ZombieBox a:visited{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#ZombieBox a.active,
+#ZombieBox a:hover{
+  color: #7B799E;
+  background: #222335;
+}
+
+#Dave{
+  box-sizing: border-box;
+  position: absolute;
+  margin-left: 719px;
+  box-sizing: border-box;
+  width: 402px;
+  height: 470px;
+  bottom: 132px;
+  background: url(Characterpics/dave.png), #868205;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 10px solid #93049F;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5)
+}
+
+#Characters{
+  position: absolute;
+  width: 318px;
+  height: 82px;
+  left: 761px;
+  top: 200px;
+  background: #93049F;
+}
+
+#Zombies{
+  box-sizing: border-box;
+  position: absolute;
+  width: 402px;
+  height: 470px;
+  left: 1214px;
+  right: 224px;
+  bottom: 132px;
+  background: url(Characterpics/zombie.png), #222335;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 10px solid #7B799E;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+#ZombieBox{
+  position: absolute;
+  width: 318px;
+  height: 82px;
+  left: 1256px;
+  top: 200px;
+  background: #7B799E;
+}

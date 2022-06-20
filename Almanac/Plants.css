@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Poppins&family=Rubik+Wet+Paint&family=Sedgwick+Ave+Display&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+} 
+nav{
+  display: flex;
+    height: 80px;
+    width: 100%;
+    background-image: url(Characterpics/greenBG1.jpg.jpeg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    filter: brightness(80%) contrast(120%);
+}
+nav .logo{
+    width: 46px;
+    height: 46px;
+}
+nav .logo img {
+    width: 70x;
+    height: 65px;
+    margin-top: -10px;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+    font-family: "Poppins";
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    background: #32cd32;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;  
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: black;
+  }
+}
+
+#Background{
+    box-sizing: border-box;
+    position: absolute;
+    width: 1860px;
+    height: 3090px;
+    left: 18px;
+    top: 106px;
+    background: #F7BF84;
+    border: 20px dashed #000000;
+    filter: blur(30px);
+}
+
+#GreyRectangle{
+  /* grey margin/outline */
+  box-sizing: border-box;
+  position: absolute;
+  width: 1903px;
+  height: 3105px;
+  left: 0px;
+
+  top: 80px;
+  border: 20px solid #9D9C9C;
+}
+
+#GreenBox{
+  box-sizing: border-box;
+  position: absolute;
+  width: 1548px;
+  height: 121px;
+  top: 18px;
+  left: 170px;
+  background: #5F8E02;
+  border: 1px solid #000000;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.99);
+}
+
+#Plants{
+  align-self: center;
+  position: absolute;
+  width: 463px;
+  height: 78px;
+  left: 805px;
+  top: 34px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 78px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+  -webkit-text-stroke-color: #000000;
+}
+
+#MainBox{
+    box-sizing: border-box;
+    position: absolute;
+    width: 1625px;
+    height: 2590px;
+    top: 256px;
+    left: 145px;
+    right: 117px;
+    background: #6C2F12;
+    border: 10px solid #5F8E02;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.6);
+}
+
+#Table{
+    box-sizing: border-box;
+    position: absolute;
+    width: 1528px;
+    height: 1588px;
+    top: 290px;
+    left: 170px;
+    right: 117px;
+}
+
+p{
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    font-size: 18pt;
+    font-weight: bolder;
+}
+
+td{
+    border: 5px solid black;
+    background: url(Plantspics/oldpaperbg.jpg);
+    background-position: center;
+}
+
+#text{
+    font-size: 20px;
+    font-weight: 900;
+    position: relative;
+}
+#text .tooltip{
+    z-index: 1;
+    padding: 12px;
+    width: 500px;
+    color: white;
+    background-color: #5F8E02;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 4px solid #6C2F12;;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: all .2s ease-in-out;
+    top: 100px;
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+}
+#text .tooltip::before{
+    content: '';
+    position: absolute;
+    top: -23px;
+    left: 45%;
+    transform: rotate(181deg);
+    border-width: 12px;
+    border-color: #5F8E02 transparent transparent transparent;
+    border-style: solid;
+}
+#text:hover .tooltip{
+  position: absolute;
+    top: -50;
+    opacity: 1;
+    visibility: visible;
+}
+.Back {
+  position: absolute;
+  font: 'Poppins';
+  top: 100px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+    z-index: 1;
+}
+.Back:hover,
+.Back:focus {
+  animation: 10s lights infinite; 
+}
+@keyframes lights {
+  from {
+    text-shadow: 0 0 10px rgb(219, 243, 214), 0 0 20px rgb(191, 233, 201), 0 0 30px #4dcedf, 0 0 40px #3462c4, 0 0 50px #006be6, 0 0 60px #007fe6, 0 0 70px #009de6;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #5232e2, 0 0 40px #3c30dd, 0 0 50px #5c11e7, 0 0 60px #b84dff, 0 0 70px #5f4dff, 0 0 80px #0875a7;
+  }
+}
